@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1573714476 source:d:\university year2\oop\car rental\main.cpp
+	<iostream>
+	<vector>
+	<string>
+
