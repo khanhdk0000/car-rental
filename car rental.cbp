@@ -32,6 +32,19 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="BookAndRent.h" />
+		<Unit filename="CarRentalManagement.cpp" />
+		<Unit filename="CarRentalManagement.h" />
+		<Unit filename="MaintenanceJob.cpp" />
+		<Unit filename="MaintenanceJob.h" />
+		<Unit filename="Pickup.cpp" />
+		<Unit filename="Pickup.h" />
+		<Unit filename="SUV.cpp" />
+		<Unit filename="SUV.h" />
+		<Unit filename="Sedan.cpp" />
+		<Unit filename="Sedan.h" />
+		<Unit filename="ServiceHistory.h" />
+		<Unit filename="Vehicle.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
