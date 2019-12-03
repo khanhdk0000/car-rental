@@ -20,7 +20,7 @@ struct Dimension
 class PickUp: public Vehicle
 {
     Dimension dim;
-    vector<ServiceHistory*> record;
+    //vector<ServiceHistory*> record;
 public:
     PickUp(){}
     PickUp(string ID, string brand, int cost, int width, int length, int height):Vehicle(ID, brand, cost)

@@ -6,6 +6,7 @@
 #include "Pickup.h"
 #include "SUV.h"
 #include "BookAndRent.h"
+#include "RentalContract.h"
 #include <iostream>
 #include <vector>
 
@@ -15,27 +16,25 @@ using namespace std;
 class CarRentalManagement:public BookAndRent
 {
 private:
-    static int numCar;
-    string _name;
-    int _age;
-    bool _isQualified;
-    int _phoneNum;
     int _day;
-    vector <Vehicle*> Contract;
-    int preMile, curMile;
+    vector <Vehicle*> arrVeh;
+    vector <RentalContract*> contract;
 public:
     CarRentalManagement(){}
     CarRentalManagement(Vehicle* &veh);
-    void setupContract();
     int getnumCar();
-    void addCar();
     void addVehicle(string ID, string brand, int cost,int trunkCap);
     void addVehicle(string ID, string brand, int cost, int width, int length,int height);
     void addVehicle(string ID, string brand, int cost, bool isFour);
-    void serviceFleet();
-    void Booking();
-    void Taking();
+    void addVehicle(Vehicle* &pVeh);
+    void ServiceFleet();
+    int Booking();
+    int Renting();
     void Returning();
+    void printInfo();
+    void AddContract();
+    void AddVehicle(int idx);
+    void PrintService();
     ~CarRentalManagement();
 };
 

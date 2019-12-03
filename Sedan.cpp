@@ -16,10 +16,20 @@ void Sedan::serviceEngine()
 {
     string mess;
     cout << "Welcome to Engine Service of Sedan." << endl;
-    cout << "Enter your opinion: ";
+    cout << "Enter your request opinion: ";
+    cin.clear();
+    cin.ignore(256, '\n');
     getline(cin, mess);
-    ServiceHistory* pRec = new ServiceHistory(mess);
-    record.push_back(pRec);
+    if(is_first_)
+    {
+        ServiceHistory tem(mess, 1);
+        record = tem;
+        is_first_ = false;
+    }
+    else
+    {
+        record.AddMainten(1, mess);
+    }
 }
 
 void Sedan::serviceTransmission()
@@ -29,10 +39,21 @@ void Sedan::serviceTransmission()
     cout << "Welcome to Transmission Service of Sedan." << endl;
     cout << "Enter the fluid level of transmission: ";
     cin >> info;
+    fluid_level_ = info;
     cout << "Enter your request about Transmission: ";
+    cin.clear();
+    cin.ignore(256, '\n');
     getline(cin, mess);
-    ServiceHistory* pRec = new ServiceHistory(info, mess);
-    record.push_back(pRec);
+    if(is_first_)
+    {
+        ServiceHistory tem(mess, 2);
+        record = tem;
+        is_first_ = false;
+    }
+    else
+    {
+        record.AddMainten(2, mess);
+    }
 }
 
 void Sedan::serviceTires()
@@ -42,9 +63,19 @@ void Sedan::serviceTires()
     cout << "Welcome to Tire Service of Sedan." << endl;
     cout << "Enter your type of tire: ";
     cin >> type;
+    tyre_type_ = type;
     cout << "Enter your opinion about tire: ";
-    cin.ignore();
+    cin.clear();
+    cin.ignore(256, '\n');
     getline(cin, mess);
-    ServiceHistory* pRec = new ServiceHistory(type, mess);
-    record.push_back(pRec);
+    if(is_first_)
+    {
+        ServiceHistory tem(mess, 3);
+        record = tem;
+        is_first_ = false;
+    }
+    else
+    {
+        record.AddMainten(3, mess);
+    }
 }

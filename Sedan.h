@@ -11,7 +11,7 @@ using namespace std;
 class Sedan: public Vehicle
 {
     int trunk_cap;
-    std::vector<ServiceHistory*> record;
+    //std::vector<ServiceHistory*> record;
 public:
     Sedan(){};
     Sedan(string ID, string brand, int cost, int trunkCap):Vehicle(ID, brand, cost), trunk_cap(trunkCap){}

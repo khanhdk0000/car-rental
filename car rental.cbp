@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="../rapidjson-master/include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -35,16 +36,22 @@
 		<Unit filename="BookAndRent.h" />
 		<Unit filename="CarRentalManagement.cpp" />
 		<Unit filename="CarRentalManagement.h" />
+		<Unit filename="Json.h" />
 		<Unit filename="MaintenanceJob.cpp" />
 		<Unit filename="MaintenanceJob.h" />
 		<Unit filename="Pickup.cpp" />
 		<Unit filename="Pickup.h" />
+		<Unit filename="RentalContract.cpp" />
+		<Unit filename="RentalContract.h" />
 		<Unit filename="SUV.cpp" />
 		<Unit filename="SUV.h" />
 		<Unit filename="Sedan.cpp" />
 		<Unit filename="Sedan.h" />
+		<Unit filename="ServiceHistory.cpp" />
 		<Unit filename="ServiceHistory.h" />
 		<Unit filename="Vehicle.h" />
+		<Unit filename="date.cpp" />
+		<Unit filename="date.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

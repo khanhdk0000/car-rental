@@ -11,7 +11,7 @@ using namespace std;
 class SUV: public Vehicle
 {
     bool fourSeat;
-    vector<ServiceHistory*> record;
+    //vector<ServiceHistory*> record;
 public:
     SUV(){}
     SUV(string ID, string brand, int cost,bool isFour):Vehicle(ID, brand, cost), fourSeat(isFour){}
